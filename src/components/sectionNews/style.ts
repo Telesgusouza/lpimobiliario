@@ -8,7 +8,7 @@ export const Container = styled.section<IProps>`
   width: 100%;
   height: 100vh;
   min-height: 400px;
-  max-height: 600px;
+  max-height: 700px;
 
   background-image: url(${(props) => props.bg});
   background-repeat: no-repeat;

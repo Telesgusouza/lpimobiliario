@@ -1,4 +1,9 @@
 @font-face {
+  font-family: codecPro;
+  src: url(../public/font/codec-pro.regular.ttf);
+}
+
+@font-face {
   font-family: OpenSauce;
   src: url(../public/font/OpenSauceFonts/Fonts/OpenSauceOne-Regular.ttf);
 }

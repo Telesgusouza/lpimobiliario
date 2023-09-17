@@ -13,7 +13,6 @@ export default function Reveal({ children }: IProps) {
   const { ref, inView } = useInView({ threshold: 0 });
 
   useEffect(() => {
-    console.log(inView);
     if (inView) {
       setIsVisible("visible");
     }
