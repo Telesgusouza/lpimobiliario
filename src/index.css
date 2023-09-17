@@ -1,3 +1,8 @@
+@font-face {
+  font-family: OpenSauceBlack;
+  src: url(../public/font/OpenSauceFonts/Fonts/OpenSauceOne-Black.ttf);
+}
+
 :root {
  --DarkBlue: #101728;
  --VeryDarkGray: #0f1819;

@@ -1,16 +1,14 @@
 import styled from "styled-components";
 
-
 interface IContainer {
-  imgMain: string
+  imgmain: string;
 }
 
 export const Container = styled.main<IContainer>`
   width: 100%;
   height: 100%;
-  min-height: 500px;
 
-  background-image: url(${props => props.imgMain});
+  background-image: url(${(props) => props.imgmain});
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -79,7 +77,6 @@ export const Container = styled.main<IContainer>`
 
 export const Menu = styled.div`
   display: none;
-
 
   input {
     position: absolute;
@@ -160,7 +157,6 @@ export const Menu = styled.div`
     transform-origin: 0% 100%;
     transform: rotate(-45deg) scale(1);
     background-color: white;
-
   }
 
   input:checked ~ menu {
@@ -170,5 +166,27 @@ export const Menu = styled.div`
 
   @media (max-width: 600px) {
     display: block;
+  }
+`;
+
+export const Title = styled.div`
+  min-height: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  h1 {
+    font-family: OpenSauceBlack, sans-serif;
+    font-size: 2.8rem;
+    color: white;
+    text-shadow: 0 0 15px rgba(100, 100, 100, 0.15);
+  }
+
+  @media (max-width: 550px) {
+    h1 {
+      font-size: 2.5rem;
+      text-align: center;
+      text-shadow: 0 0 15px rgba(50, 50, 50, 0.4);
+    }
   }
 `;
