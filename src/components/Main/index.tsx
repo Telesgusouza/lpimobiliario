@@ -2,6 +2,7 @@ import * as Styled from "./styles";
 
 import iconPhoto from "../../../public/icon/icon1 (1).png";
 import bgMain from "../../../public/image/imgMain.jpeg";
+import Reveal from "../Reveal";
 
 export default function Main() {
   return (
@@ -39,10 +40,12 @@ export default function Main() {
       </header>
 
       <Styled.Title className="box">
-        <h1>
-          Casas acessíveis <br />
-          em comunidades prósperas
-        </h1>
+        <Reveal>
+          <h1>
+            Casas acessíveis <br />
+            em comunidades prósperas
+          </h1>
+        </Reveal>
       </Styled.Title>
     </Styled.Container>
   );

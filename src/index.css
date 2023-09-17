@@ -1,4 +1,20 @@
 @font-face {
+  font-family: OpenSauce;
+  src: url(../public/font/OpenSauceFonts/Fonts/OpenSauceOne-Regular.ttf);
+}
+
+@font-face {
+  font-family: OpenSauceLight;
+  src: url(../public/font/OpenSauceFonts/Fonts/OpenSauceOne-Light.ttf);
+}
+
+@font-face {
+  font-family: OpenSauceMedium;
+  src: url(../public/font/OpenSauceFonts/Fonts/OpenSauceOne-Medium.ttf);
+}
+
+
+@font-face {
   font-family: OpenSauceBlack;
   src: url(../public/font/OpenSauceFonts/Fonts/OpenSauceOne-Black.ttf);
 }

@@ -171,6 +171,10 @@ export const Menu = styled.div`
 
 export const Title = styled.div`
   min-height: 400px;
+  max-height: 600px;
+  height: calc(100vh - 90px);
+
+
   display: flex;
   flex-direction: column;
   justify-content: center;
