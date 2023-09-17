@@ -1,11 +1,16 @@
 import styled from "styled-components";
 
-export const Container = styled.main`
+
+interface IContainer {
+  imgMain: string
+}
+
+export const Container = styled.main<IContainer>`
   width: 100%;
   height: 100%;
   min-height: 500px;
 
-  background-image: url(../../../public/image/imgMain.jpeg);
+  background-image: url(${props => props.imgMain});
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -75,7 +80,6 @@ export const Container = styled.main`
 export const Menu = styled.div`
   display: none;
 
-  /* position: relative; */
 
   input {
     position: absolute;
