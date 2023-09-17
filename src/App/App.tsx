@@ -1,3 +1,4 @@
+import Footer from "../components/Footer"
 import Main from "../components/Main"
 import SectionConnected from "../components/SectionConnected"
 import SectionCostEstimate from "../components/SectionCostEstimate"
@@ -15,10 +16,7 @@ function App() {
       <SectionCostEstimate />
       <SectionNews />
       <SectionConnected />
-      
-      <h1 style={{height: "700px"}} >
-        ola mundo
-      </h1>
+      <Footer />
     </div>
   )
 }
