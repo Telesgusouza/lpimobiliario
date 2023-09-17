@@ -71,4 +71,37 @@ export const Article = styled.article`
     font-family: OpenSauceMedium;
     font-size: 1.1rem;
   }
+
+  @media (max-width: 800px) {
+    img {
+      width: 270px;
+      height: 270px;
+    }
+
+    p {
+      font-size: 1rem;
+    }
+  }
+
+  @media (max-width: 640px) {
+    flex-direction: column;
+    text-align: center;
+
+    div {
+      width: 100%;
+      margin-bottom: 40px;
+    }
+
+    h2 {
+      max-width: 100%;
+    }
+
+    strong {
+      max-width: 100%;
+    }
+
+    button {
+margin: 30px auto 0 auto;
+    }
+  }
 `;
