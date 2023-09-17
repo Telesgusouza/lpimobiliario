@@ -10,7 +10,7 @@ export interface IConfigChart {
     legend: {
       position: "bottom";
     };
-    responsive: [
+    responsive?: [
       {
         breakpoint: number;
         options: {
@@ -38,16 +38,16 @@ export default function SectionGrafictDonut() {
       legend: {
         position: "bottom",
       },
-      responsive: [
-        {
-          breakpoint: 480,
-          options: {
-            chart: {
-              width: 200,
-            },
-          },
-        },
-      ],
+      // responsive: [
+      //   {
+      //     breakpoint: 480,
+      //     options: {
+      //       chart: {
+      //         width: 200,
+      //       },
+      //     },
+      //   },
+      // ],
     },
   };
 

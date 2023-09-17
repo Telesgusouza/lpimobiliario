@@ -27,6 +27,7 @@ export const Container = styled.section`
   }
 
   tr {
+    height: fit-content;
     display: grid;
     grid-template-columns: 1fr 1fr;
   }
@@ -42,7 +43,7 @@ export const Container = styled.section`
   }
 
   td {
-    height: 50px;
+    min-height: 50px;
 
     padding: 20px;
 
