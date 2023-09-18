@@ -1,9 +1,41 @@
+import { useEffect, useRef } from 'react'
+import { useDispatch } from 'react-redux'
+
 import Reveal from "../Reveal";
 import * as Styled from "./style";
 
 export default function SectionCostEstimate() {
+
+  const myComponentRef = useRef<HTMLDivElement>(null);
+
+  const dispatch = useDispatch();
+
+
+  
+  const handleScroll = () => {
+    if (myComponentRef.current) {
+      const boundingBox = myComponentRef.current.getBoundingClientRect();
+      dispatch({
+        type: 'ESTIMATED',
+        payload: boundingBox.top,
+      });
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener('scroll', handleScroll);
+    
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []); 
+  
+  useEffect(() => {
+    handleScroll();
+  }, []);
+
   return (
-    <Styled.Container>
+    <Styled.Container ref={myComponentRef} >
       <Reveal>
         <div className="box">
           <h2>Estimativa de custo</h2>

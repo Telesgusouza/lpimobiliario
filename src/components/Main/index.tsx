@@ -1,10 +1,27 @@
+import { useSelector } from "react-redux";
+
 import * as Styled from "./styles";
 
 import iconPhoto from "../../../public/icon/icon1 (1).png";
 import bgMain from "../../../public/image/imgMain.jpeg";
 import Reveal from "../Reveal";
+import { IRootReducer } from "../../api/interface";
 
 export default function Main() {
+  const { report, estimated, aboutUs, connect } = useSelector(
+    (rootReducer: IRootReducer) => rootReducer.useLocationComponents
+  );
+
+  function scrollPage(top: number) {
+    // console.log("esta chegando aqui")
+    // console.log(top)
+    // console.log(report)
+    window.scrollTo({
+      top: top,
+      behavior: "smooth",
+    });
+  }
+
   return (
     <Styled.Container imgmain={bgMain}>
       <header className="box">
@@ -12,10 +29,10 @@ export default function Main() {
 
         <nav>
           <ul>
-            <li>Relatório</li>
-            <li>Estimativa</li>
-            <li>Sobre nós</li>
-            <li>Conectar</li>
+            <li onClick={() => scrollPage(report)}>Relatório</li>
+            <li onClick={() => scrollPage(estimated)}>Estimativa</li>
+            <li onClick={() => scrollPage(connect)}>Conectar</li>
+            <li onClick={() => scrollPage(aboutUs)}>Sobre nós</li>
           </ul>
         </nav>
 
@@ -30,10 +47,10 @@ export default function Main() {
 
           <menu>
             <ul>
-              <li>Relatório</li>
-              <li>Estimativa</li>
-              <li>Sobre nós</li>
-              <li>Conectar</li>
+              <li onClick={() => scrollPage(report)} >Relatório</li>
+              <li onClick={() => scrollPage(estimated)} >Estimativa</li>
+              <li onClick={() => scrollPage(connect)} >Conectar</li>
+              <li onClick={() => scrollPage(aboutUs)} >Sobre nós</li>
             </ul>
           </menu>
         </Styled.Menu>

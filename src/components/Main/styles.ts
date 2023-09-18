@@ -18,14 +18,18 @@ export const Container = styled.main<IContainer>`
   overflow: hidden;
 
   header {
-    padding-top: 10px;
+    padding-top: 40px;
 
     display: flex;
-    justify-content: space-between;
+    /* justify-content: space-between; */
+    justify-content: end;
     align-items: center;
 
     img {
-      width: 80px;
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 120px;
       height: fit-content;
     }
 

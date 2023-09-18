@@ -1,27 +1,9 @@
+import { useDispatch } from "react-redux";
 import ReactApexChart from "react-apexcharts";
 import * as Styled from "./style";
 import Reveal from "../Reveal";
-
-export interface IConfigChart {
-  series: number[];
-  options: {
-    colors?: string[];
-    labels: string[];
-    legend: {
-      position: "bottom";
-    };
-    responsive?: [
-      {
-        breakpoint: number;
-        options: {
-          chart: {
-            width: number;
-          };
-        };
-      }
-    ];
-  };
-}
+import { useEffect, useRef } from "react";
+import { IConfigChart } from "../../api/interface";
 
 export default function SectionGrafictDonut() {
   const options: IConfigChart = {
@@ -38,21 +20,39 @@ export default function SectionGrafictDonut() {
       legend: {
         position: "bottom",
       },
-      // responsive: [
-      //   {
-      //     breakpoint: 480,
-      //     options: {
-      //       chart: {
-      //         width: 200,
-      //       },
-      //     },
-      //   },
-      // ],
     },
   };
 
+  const myComponentRef = useRef<HTMLDivElement>(null);
+
+  const dispatch = useDispatch();
+
+  const handleScroll = () => {
+    console.log("aaaaa");
+    if (myComponentRef.current) {
+      console.log("UÉEEE PORRA");
+      const boundingBox = myComponentRef.current.getBoundingClientRect();
+      dispatch({
+        type: "REPORT",
+        payload: boundingBox.top,
+      });
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
+  useEffect(() => {
+    handleScroll();
+  }, []);
+
   return (
-    <Styled.Container>
+    <Styled.Container ref={myComponentRef}>
       <div className="box">
         <Reveal>
           <ReactApexChart
