@@ -16,7 +16,6 @@ export default function SectionConnected() {
     if (myComponentRef.current) {
       const boundingBox = myComponentRef.current.getBoundingClientRect();
 
-      console.log("sera q estou louco?")
       dispatch({
         type: "CONNECT",
         payload: boundingBox.top,

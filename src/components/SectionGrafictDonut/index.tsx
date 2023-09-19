@@ -28,9 +28,7 @@ export default function SectionGrafictDonut() {
   const dispatch = useDispatch();
 
   const handleScroll = () => {
-    console.log("aaaaa");
     if (myComponentRef.current) {
-      console.log("UÉEEE PORRA");
       const boundingBox = myComponentRef.current.getBoundingClientRect();
       dispatch({
         type: "REPORT",
